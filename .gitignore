@@ -4,13 +4,31 @@ target/
 !**/src/test/**/target/
 
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
+# IntelliJ
+.idea/
 *.iml
-*.ipr
+
+# Build output
+/out/
+build/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Java
+*.class
+
+# Maven
+.mvn/
+
+# Ignore everything in /resources/ except .fxml files (optional)
+src/main/resources/*
+!src/main/resources/**/*.fxml
+
 
 ### Eclipse ###
 .apt_generated
