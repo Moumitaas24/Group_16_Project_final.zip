@@ -4,4 +4,9 @@ public class Task1
 {
     @javafx.fxml.FXML
     public void initialize() {
-    }}
+    }
+
+    @javafx.fxml.FXML
+    public void buttonOnMouseClick(ActionEvent actionEvent) {
+    }
+}
