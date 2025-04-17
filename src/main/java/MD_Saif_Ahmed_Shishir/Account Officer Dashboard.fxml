@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="MD_Saif_Ahmed_Shishir.AccountOfficerDashboard"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <Text layoutX="150.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Welcome to Account Officer Dashboard">
+            <font>
+                <Font name="Javanese Text" size="28.0" />
+            </font>
+        </Text>
+
+        <Button layoutX="60.0" layoutY="120.0" prefWidth="250.0" onAction="#SalaryButton" text="Employee Salary"/>
+        <Button layoutX="60.0" layoutY="180.0" prefWidth="250.0" onAction="#BudgetButton" text="Project Budget"/>
+        <Button layoutX="60.0" layoutY="240.0" prefWidth="250.0" onAction="#IncomeStatementButton" text="Income Statement and Balance Sheet"/>
+
+        <Button layoutX="380.0" layoutY="120.0" prefWidth="250.0" onAction="#TaxReportButton" text="Tax Report"/>
+        <Button layoutX="380.0" layoutY="180.0" prefWidth="250.0" onAction="#LeaveApplicationButton" text="Leave Application"/>
+        <Button layoutX="380.0" layoutY="240.0" prefWidth="250.0" onAction="#BonusButton" text="Employee Bonus"/>
+    </children>
+</AnchorPane>
