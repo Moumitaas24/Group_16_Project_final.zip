@@ -13,33 +13,36 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Task5
+public class InventoryManagerTrackStockLevels
 {
     @javafx.fxml.FXML
-    private TextField quantityfxid;
+    private TextField stockInventoryfxid;
+
+    private static final String FILE_PATH = "C:\\Users\\Public\\Documents\\stock_inventory.txt";
 
     @javafx.fxml.FXML
     public void initialize() {
     }
-    private static final String FILE_PATH = "C:\\Users\\Public\\Documents\\daily_stock_update.txt";
+
+
+
     @javafx.fxml.FXML
-    public void saveonmouseclick(ActionEvent actionEvent){
-            String userInput = quantityfxid.getText();
-            if (userInput != null && !userInput.trim().isEmpty()){
-                File file = new File(FILE_PATH);
-                try (BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))){
-                    writer.write(userInput);
-                    writer.newLine();
-                    System.out.println("Daily Stock Updated:"+userInput);
-                } catch (IOException e){
-                    e.printStackTrace();
-                }
+    public void restockInventoryOnMouseClick(ActionEvent actionEvent) {
+        String userInput = stockInventoryfxid.getText();
+        if (userInput != null && !userInput.trim().isEmpty()){
+            File file = new File(FILE_PATH);
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))){
+                writer.write(userInput);
+                writer.newLine();
+                System.out.println("Stock Data Saved:"+userInput);
+            } catch (IOException e){
+                e.printStackTrace();
             }
         }
+    }
 
-
-    @javafx.fxml.FXML
-    public void backonmouseclick(ActionEvent actionEvent) {
+    @FXML
+    public void backButtonOnMouseClick(ActionEvent actionEvent) {
         try{
             FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("DashboardInventoryManager.fxml"));
             Parent root = fxmlLoader.load();
@@ -52,4 +55,4 @@ public class Task5
             e.printStackTrace();
         }
     }
-    }
+}

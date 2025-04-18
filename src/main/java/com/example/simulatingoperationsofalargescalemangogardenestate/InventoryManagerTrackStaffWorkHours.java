@@ -9,39 +9,40 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
-public class Task1
+public class InventoryManagerTrackStaffWorkHours
 {
-    @javafx.fxml.FXML
-    private TextField stockInventoryfxid;
-
-    private static final String FILE_PATH = "C:\\Users\\Public\\Documents\\stock_inventory.txt";
+    @FXML
+    private TextField hoursfxid;
+    @FXML
+    private TextField employeeNamefxid;
 
     @javafx.fxml.FXML
     public void initialize() {
     }
-
-
-
+    private static final String FILE_PATH = "C:\\Users\\Public\\Documents\\Employee_Hours.txt";
     @javafx.fxml.FXML
-    public void restockInventoryOnMouseClick(ActionEvent actionEvent) {
-        String userInput = stockInventoryfxid.getText();
-        if (userInput != null && !userInput.trim().isEmpty()){
-            File file = new File(FILE_PATH);
-            try (BufferedWriter writer = new BufferedWriter(new FileWriter(file,true))){
-                writer.write(userInput);
+    public void saveButtonOnMouseClick(ActionEvent actionEvent) {
+        String name = employeeNamefxid.getText().trim();
+        String hours = hoursfxid.getText().trim();
+
+        if (!name.isEmpty() && !hours.isEmpty()) {
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(FILE_PATH, true))) {
+                writer.write(name + " : " + hours);
                 writer.newLine();
-                System.out.println("Stock Data Saved:"+userInput);
-            } catch (IOException e){
-                e.printStackTrace();
+                System.out.println("Saved: " + name + " : " + hours);
+                employeeNamefxid.clear();
+                hoursfxid.clear();
+            } catch (IOException e) {
+                System.err.println("Error saving data: " + e.getMessage());
             }
+        } else {
+            System.out.println("Please fill in both name and hours fields.");
         }
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void backButtonOnMouseClick(ActionEvent actionEvent) {
         try{
             FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("DashboardInventoryManager.fxml"));
@@ -55,4 +56,5 @@ public class Task1
             e.printStackTrace();
         }
     }
+
 }

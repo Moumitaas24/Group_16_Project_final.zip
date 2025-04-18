@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.time.LocalDate;
-public class Task2
+public class InventoryManagerTrackEquipmentAvailability
 {
     @javafx.fxml.FXML
     private TableView<EquipmentEntry> tableViewfxid;

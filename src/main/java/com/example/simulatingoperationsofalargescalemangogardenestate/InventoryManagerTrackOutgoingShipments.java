@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class Task3
+public class InventoryManagerTrackOutgoingShipments
 {
     @javafx.fxml.FXML
     private TextField destinationfxid;
