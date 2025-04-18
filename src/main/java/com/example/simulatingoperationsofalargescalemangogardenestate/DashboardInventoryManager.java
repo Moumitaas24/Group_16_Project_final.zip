@@ -23,7 +23,7 @@ public class DashboardInventoryManager
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
-            stage.setTitle("Track Stock");
+            stage.setTitle("Track Staff Hours");
             stage.show();
         } catch (IOException e){
             e.printStackTrace();
@@ -80,7 +80,7 @@ public class DashboardInventoryManager
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
-            stage.setTitle("Track Stock");
+            stage.setTitle("Daily Stock Update");
             stage.show();
         } catch (IOException e){
             e.printStackTrace();
@@ -95,7 +95,7 @@ public class DashboardInventoryManager
             Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
             stage.setScene(scene);
-            stage.setTitle("Track Stock");
+            stage.setTitle("Track Equipment");
             stage.show();
         } catch (IOException e){
             e.printStackTrace();
