@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="933.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MD_Saif_Ahmed_Shishir.YearlyBalanceSheetController">
+    <children>
+        <Label layoutX="153.0" layoutY="61.0" text="Total employee Salary:" />
+        <Label layoutX="155.0" layoutY="100.0" text="Electricity bill :" />
+        <Label layoutX="153.0" layoutY="180.0" text="Name of Yearly :" />
+        <Button layoutX="33.0" layoutY="30.0" mnemonicParsing="false" text="Back" />
+        <Button layoutX="754.0" layoutY="238.0" mnemonicParsing="false" text="Preview Report" />
+        <TableView fx:id="tableView" layoutX="155.0" layoutY="305.0" prefHeight="196.0" prefWidth="628.0">
+            <columns>
+                <TableColumn fx:id="monthsColumn" prefWidth="92.0" text="Month" />
+                <TableColumn fx:id="employeeSalaryColumn" prefWidth="242.0" text="Employee Salary" />
+                <TableColumn fx:id="ElecricitybillColumn" prefWidth="123.0" text="Elecricity bill" />
+                <TableColumn fx:id="transportcostColumn" prefWidth="169.0" text="Transport cost " />
+            </columns>
+        </TableView>
+        <Button layoutX="33.0" layoutY="513.0" mnemonicParsing="false" text="Delete Report" />
+        <Label layoutX="155.0" layoutY="140.0" text="Transport cost :" />
+        <ComboBox fx:id="monthComboBox" layoutX="339.0" layoutY="175.0" prefWidth="150.0" />
+        <TextField fx:id="TotalSalaryTextField" layoutX="339.0" layoutY="56.0" />
+        <TextField fx:id="totalSalaryTextField" layoutX="339.0" layoutY="95.0" />
+        <TextField fx:id="TransCostTextField" layoutX="339.0" layoutY="135.0" />
+    </children>
+</AnchorPane>
