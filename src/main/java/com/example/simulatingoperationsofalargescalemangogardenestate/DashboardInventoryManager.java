@@ -17,6 +17,17 @@ public class DashboardInventoryManager
 
     @javafx.fxml.FXML
     public void trackStaffHoursOnMouseClick(ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("Task4.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Track Stock");
+            stage.show();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     @javafx.fxml.FXML
@@ -63,6 +74,17 @@ public class DashboardInventoryManager
 
     @javafx.fxml.FXML
     public void dailyStockUpdateOnMouseClick(ActionEvent actionEvent) {
+        try{
+            FXMLLoader fxmlLoader= new FXMLLoader(getClass().getResource("Task5.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Track Stock");
+            stage.show();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     @javafx.fxml.FXML
