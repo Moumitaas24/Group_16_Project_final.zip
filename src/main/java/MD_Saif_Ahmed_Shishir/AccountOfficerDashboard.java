@@ -1,10 +1,9 @@
 package MD_Saif_Ahmed_Shishir;
 
+package com.example.project_oop;
+
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -18,61 +17,79 @@ public class AccountOfficerDashboard
 
     @javafx.fxml.FXML
     public void BonusButton(ActionEvent actionEvent) throws IOException {
-            Parent scene2;
-            scene2 = FXMLLoader.load(getClass().getResource("EidUlAzhaScene.fxml"));
-            Scene scene3 = new Scene(scene2);
-            Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-            window.setScene(scene3);
-            window.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("EidUlAzhaScene.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("EidUlAzhaScene");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void TaxReportButton(ActionEvent actionEvent) throws IOException {
-        Parent scene2;
-        scene2 = FXMLLoader.load(getClass().getResource("TaxReportScene.fxml"));
-        Scene scene3 = new Scene(scene2);
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(scene3);
-        window.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("TaxReport.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("TaxReport");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void LeaveApplicationButton(ActionEvent actionEvent) throws IOException {
-        Parent scene2;
-        scene2 = FXMLLoader.load(getClass().getResource("/MD_Saif_Ahmed_Shishir/LeaveApplicationScene.fxml"));
-        Scene scene3 = new Scene(scene2);
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(scene3);
-        window.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LeaveApplicationScene.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("LeaveApplicationScene");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void SalaryButton(ActionEvent actionEvent) throws IOException {
-        Parent scene2;
-        scene2 = FXMLLoader.load(getClass().getResource("EmployeeSalaryScene.fxml"));
-        Scene scene3 = new Scene(scene2);
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(scene3);
-        window.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("EmployeeSalaryScene.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("EmployeeSalaryScene");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void IncomeStatementButton(ActionEvent actionEvent) throws IOException {
-        Parent scene2;
-        scene2 = FXMLLoader.load(getClass().getResource("YearlyBalanceSheet.fxml"));
-        Scene scene3 = new Scene(scene2);
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(scene3);
-        window.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("YearlyBalanceSheet.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("YearlyBalanceSheet");
+
+        stage.setScene(scene);
+        stage.show();
     }
 
-    @FXML
+    @javafx.fxml.FXML
     public void BudgetButton(ActionEvent actionEvent) throws IOException {
-        Parent scene2;
-        scene2 = FXMLLoader.load(getClass().getResource("ProjectBudgetScene.fxml"));
-        Scene scene3 = new Scene(scene2);
-        Stage window = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(scene3);
-        window.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ProjectBudgetScene.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("ProjectBudgetScene");
+
+        stage.setScene(scene);
+        stage.show();
     }
 }
