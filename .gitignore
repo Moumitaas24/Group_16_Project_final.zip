@@ -25,9 +25,6 @@ Thumbs.db
 # Maven
 .mvn/
 
-# Ignore everything in /resources/ except .fxml files (optional)
-src/main/resources/*
-!src/main/resources/**/*.fxml
 
 
 ### Eclipse ###
