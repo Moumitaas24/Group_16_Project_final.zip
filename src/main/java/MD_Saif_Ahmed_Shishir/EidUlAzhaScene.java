@@ -1,4 +1,12 @@
-package MD_Saif_Ahmed_Shishir;
+package com.example.project_oop;
+
+import javafx.collections.FXCollections;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -6,6 +14,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class EidUlAzhaScene {
 
@@ -34,15 +45,14 @@ public class EidUlAzhaScene {
     private TableColumn<Employee, Integer> EmployIdColumn;
 
     @FXML
-    private TableColumn<Employee, String> DeeptColumn;
-
-    @FXML
     private TableColumn<Employee, String> DesigColumn;
 
     @FXML
     private TableColumn<Employee, Integer> BonusColumn;
 
     private ObservableList<Employee> EmplyList;
+    @FXML
+    private TableColumn<Employee,String> DeptColumn;
 
     public void initialize() {
         EmplyList = FXCollections.observableArrayList();
@@ -53,14 +63,14 @@ public class EidUlAzhaScene {
 
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         EmployIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
-        DeeptColumn.setCellValueFactory(new PropertyValueFactory<>("dept"));
+        DeptColumn.setCellValueFactory(new PropertyValueFactory<>("dept"));
         DesigColumn.setCellValueFactory(new PropertyValueFactory<>("desig"));
         BonusColumn.setCellValueFactory(new PropertyValueFactory<>("salary"));
 
         TableView.setItems(EmplyList);
     }
 
-    // Add button handler
+    // Add button
     @FXML
     void addBonusButtonOnClick(ActionEvent event) {
         try {
@@ -85,7 +95,7 @@ public class EidUlAzhaScene {
         }
     }
 
-    //Send button handler
+    //Send button
     @FXML
     void PreviewAndSendBonusButtonOnClick(ActionEvent event) {
         if (EmplyList.isEmpty()) {
@@ -96,10 +106,18 @@ public class EidUlAzhaScene {
         }
     }
 
-    //Back button handler
+    //Back button
     @FXML
-    void BackButtonOnClick(ActionEvent event) {
-        // Scene switch korar code ekhane deoya jabe.
+    void BackButtonOnClick(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("AccountOfficerDashboard.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+
+        Stage stage = new Stage();
+
+        stage.setTitle("AccountOfficerDashboard");
+
+        stage.setScene(scene);
+        stage.show();
         System.out.println("Back button pressed.");
     }
 
